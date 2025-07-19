@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supriya Mazumder - Computer Science Student</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111827; /* Tailwind gray-900 */
+        }
+        /* Style for the scroll-to-top button */
+        #scrollTopBtn {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        /* Animation classes for Intersection Observer */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#hero" class="text-xl font-bold tracking-tight">Supriya Mazumder</a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#bio" class="hover:text-gray-500 transition-colors">Bio</a>
+                    <a href="#work" class="hover:text-gray-500 transition-colors">Work</a>
+                    <a href="#skills" class="hover:text-gray-500 transition-colors">Skills</a>
+                    <a href="#hobbies" class="hover:text-gray-500 transition-colors">Hobbies</a>
+                    <a href="#contact" class="hover:text-gray-500 transition-colors">Contact</a>
+                </nav>
+                <a href="#contact" class="hidden md:block bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('https://placehold.co/1600x900/1a202c/FFF?text=Code+on+Screen')">
+            <div class="bg-black/60 absolute inset-0"></div>
+            <div class="text-center z-10 p-6 reveal">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tighter">Supriya Mazumder</h1>
+                <p class="text-xl md:text-2xl mt-4 font-light">Computer Science Student | Front-End Developer</p>
+            </div>
+        </section>
+
+        <!-- Bio Section -->
+        <section id="bio" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-24 items-center reveal">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold tracking-tight">Bio</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                           I'm a Front-End Developer passionate about clean code, great design, and continuous growth. Currently building Glowvery, a home cleaning brand, while improving my skills in React, CSS, UI/UX, and web performance. I may be an average student, but I'm progressing every day — one pixel, one line of code at a time.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                       <!-- 
+                        INSTRUCTION: 
+                        1. Upload your image to a hosting service (like Imgur).
+                        2. Get the direct image link (e.g., "https://i.imgur.com/your-image.jpg").
+                        3. Replace the 'src' value below with your image link.
+                       -->
+                       <img src="/images/IMG_20250718_200258.jpg" alt="Supriya Mazumder Portrait" class="rounded-lg shadow-lg object-cover w-full h-full col-span-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work Section -->
+        <section id="work" class="py-20 md:py-32 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-left mb-12 reveal">
+                    <h2 class="text-3xl font-bold tracking-tight">Featured Work</h2>
+                    <p class="text-gray-600 mt-2">A selection of projects I'm proud of.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center reveal">
+                     <div class="relative h-96">
+                        <img src="https://placehold.co/800x600/334155/FFF?text=Glowvery+Project" alt="Glowvery Project" class="rounded-lg shadow-xl object-cover w-full h-full">
+                        <div class="absolute inset-0 bg-black/30 rounded-lg flex items-end p-8 text-white">
+                            <div class="max-w-md">
+                                <h3 class="text-2xl font-semibold">Glowvery</h3>
+                                <p class="mt-2">A home cleaning brand we currently building. Focused on a seamless user experience and modern design, with business partner Pralay Sarker.</p>
+                                <a href="#" class="mt-4 inline-block text-white font-semibold hover:underline">View Project &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-96">
+                        <img src="https://placehold.co/800x600/475569/FFF?text=Portfolio+Website" alt="Portfolio Website Project" class="rounded-lg shadow-xl object-cover w-full h-full">
+                        <div class="absolute inset-0 bg-black/30 rounded-lg flex items-end p-8 text-white">
+                            <div class="max-w-md">
+                                <h3 class="text-2xl font-semibold">Personal Portfolio</h3>
+                                <p class="mt-2">This very website, designed to be clean, responsive, and showcase my skills and projects.</p>
+                                 <a href="https://github.com/supriya140?tab=repositories" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-white font-semibold hover:underline">View on GitHub &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education & Skills Section -->
+        <section id="skills" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                 <div class="grid md:grid-cols-2 gap-12 md:gap-24 items-center reveal">
+                    <img src="/images/vecteezy_stack-of-books-with-brain-education-concept-illustration_24398989.jpg" alt="Portfolio Image" class="rounded-lg shadow-lg object-cover w-full h-full">
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-bold tracking-tight">Education</h2>
+                            <div class="mt-4 border-t pt-4 space-y-4">
+                                <div>
+                                    <h3 class="font-semibold">B.Tech in Computer Science & Engineering</h3>
+                                    <p class="text-sm text-gray-500">Brainware University, 2022 - 2025</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Higher Secondary (Vocational)</h3>
+                                    <p class="text-sm text-gray-500">Baikunthapur Satish Smriti Vidya Mandir</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Schooling</h3>
+                                    <p class="text-sm text-gray-500">UTTAR RAJAPUR NAZRUL SMRITI VIDYAPITH (H.S)</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div>
+                            <h2 class="text-3xl font-bold tracking-tight">Skills</h2>
+                            <div class="mt-4 flex flex-wrap gap-3">
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium me-2 px-3 py-1.5 rounded-full">JavaScript</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium me-2 px-3 py-1.5 rounded-full">React</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium me-2 px-3 py-1.5 rounded-full">HTML & CSS</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium me-2 px-3 py-1.5 rounded-full">Tailwind CSS</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium me-2 px-3 py-1.5 rounded-full">UI/UX Design</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-medium me-2 px-3 py-1.5 rounded-full">Web Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="py-20 md:py-32 bg-gray-50">
+            <div class="container mx-auto px-6 text-center reveal">
+                <h2 class="text-3xl font-bold tracking-tight">Hobbies</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">When I'm not coding, I enjoy a few other things that help me relax and recharge.</p>
+                <div class="mt-12 grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold">Gaming</h3>
+                        <p class="mt-2 text-gray-600">I love diving into immersive worlds and challenging myself with strategy games.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold">Photography & Videography</h3>
+                        <p class="mt-2 text-gray-600">Exploring new ideas and stories through nature, this is one of my favorite pastimes.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold">Traveling</h3>
+                        <p class="mt-2 text-gray-600">Discovering new places and cultures inspires my creativity and broadens my perspective.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get in Touch Section -->
+        <section id="contact" class="py-20 md:py-32 text-center">
+            <div class="container mx-auto px-6 reveal">
+                <h2 class="text-3xl font-bold tracking-tight">Get in Touch</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">I'm not available for freelance work, but if you have a project in mind, or just want to say hello, feel free to reach out.</p>
+                <div class="mt-8">
+                    <a href="mailto:supriyamazumder2003@gmail.com" class="text-lg font-semibold text-gray-900 hover:text-gray-600 transition-colors">supriyamazumder2003@gmail.com</a>
+                </div>
+                <div class="mt-12 max-w-lg mx-auto">
+                    <a href="https://www.linkedin.com/in/supriya-mazumder-3a1b0826a/" target="_blank" rel="noopener noreferrer" class="mb-8 inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Connect on LinkedIn
+                    </a>
+                    
+                    <!-- Contact Form -->
+                    <form action="mailto:supriyamazumder2003@gmail.com" method="post" enctype="text/plain" class="text-left">
+                        <div>
+                            <label for="comment" class="block text-sm font-medium text-gray-700 mb-2">Leave a comment:</label>
+                            <textarea id="comment" name="comment" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your message..."></textarea>
+                        </div>
+                        <div class="mt-4 text-right">
+                             <button type="submit" class="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors font-semibold">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+             <div class="flex justify-center mt-4 space-x-6">
+                <a href="https://www.instagram.com/mazumdersupriya41?utm_source=ig_web_button_share_sheet&igsh=Z3hhdmswdGtocTJu" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c-4.03.006-4.59.018-6.18.09c-1.59.072-2.684.348-3.64.744a4.878 4.878 0 0 0-1.77 1.77c-.396.956-.672 2.05-.744 3.64C.018 7.72.006 8.28.006 12.315c0 4.03.012 4.59.09 6.18c.072 1.59.348 2.684.744 3.64a4.878 4.878 0 0 0 1.77 1.77c.956.396 2.05.672 3.64.744c1.59.072 2.15.084 6.18.09c4.03-.006 4.59-.018 6.18-.09c1.59-.072 2.684-.348 3.64-.744a4.878 4.878 0 0 0 1.77-1.77c.396-.956.672-2.05.744-3.64c.078-1.59.09-2.15.09-6.18c0-4.03-.012-4.59-.09-6.18c-.072-1.59-.348-2.684-.744-3.64a4.878 4.878 0 0 0-1.77-1.77c-.956-.396-2.05-.672-3.64-.744C16.906 2.018 16.346 2.006 12.315 2zm-1.04 2.08c3.876 0 4.38.016 5.91.086c1.42.064 2.24.324 2.83.58a2.81 2.81 0 0 1 1.02 1.02c.256.59.516 1.41.58 2.83c.07 1.53.086 2.034.086 5.91s-.016 4.38-.086 5.91c-.064 1.42-.324 2.24-.58 2.83a2.81 2.81 0 0 1-1.02 1.02c-.59.256-1.41.516-2.83.58c-1.53.07-2.034.086-5.91.086s-4.38-.016-5.91-.086c-1.42-.064-2.24-.324-2.83-.58a2.81 2.81 0 0 1-1.02-1.02c-.256-.59-.516-1.41-.58-2.83c-.07-1.53-.086-2.034-.086-5.91s.016-4.38.086-5.91c.064-1.42.324-2.24.58-2.83a2.81 2.81 0 0 1 1.02-1.02c.59-.256 1.41-.516 2.83-.58c1.53-.07 2.034-.086 5.91-.086zM12 7.25a4.75 4.75 0 1 0 0 9.5a4.75 4.75 0 0 0 0-9.5zM12 9a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm6.5-1.75a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/supriya.mazumder.79" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://github.com/supriya140?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.003 10.003 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            <p class="mt-8">&copy; 2024 Supriya Mazumder. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-top Button -->
+    <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-gray-900 text-white w-12 h-12 rounded-full hidden items-center justify-center shadow-lg opacity-0 transform translate-y-4 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Intersection Observer for scroll animations ---
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(elem => observer.observe(elem));
+
+            // --- Scroll-to-top button logic ---
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    scrollTopBtn.classList.remove('hidden');
+                    setTimeout(() => scrollTopBtn.classList.remove('opacity-0', 'translate-y-4'), 10);
+                } else {
+                    scrollTopBtn.classList.add('opacity-0', 'translate-y-4');
+                    setTimeout(() => scrollTopBtn.classList.add('hidden'), 300);
+                }
+            });
+            scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        });
+    </script>
+</body>
+</html>
