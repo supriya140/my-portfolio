@@ -40,17 +40,43 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="#hero" class="text-xl font-bold tracking-tight">Supriya Mazumder</a>
-                <nav class="hidden md:flex space-x-8">
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
                     <a href="#bio" class="hover:text-gray-500 transition-colors">Bio</a>
                     <a href="#work" class="hover:text-gray-500 transition-colors">Work</a>
                     <a href="#skills" class="hover:text-gray-500 transition-colors">Skills</a>
                     <a href="#hobbies" class="hover:text-gray-500 transition-colors">Hobbies</a>
                     <a href="#contact" class="hover:text-gray-500 transition-colors">Contact</a>
+                    <a href="#contact" class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">Get in Touch</a>
                 </nav>
-                <a href="#contact" class="hidden md:block bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">Get in Touch</a>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" type="button" class="z-50 p-2 -mr-2">
+                        <svg id="menu-open-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg id="menu-close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white z-40">
+        <nav class="flex flex-col items-center justify-center h-full text-center py-8 space-y-6">
+            <a href="#bio" class="mobile-nav-link block py-2 text-2xl font-semibold">Bio</a>
+            <a href="#work" class="mobile-nav-link block py-2 text-2xl font-semibold">Work</a>
+            <a href="#skills" class="mobile-nav-link block py-2 text-2xl font-semibold">Skills</a>
+            <a href="#hobbies" class="mobile-nav-link block py-2 text-2xl font-semibold">Hobbies</a>
+            <a href="#contact" class="mobile-nav-link block py-2 text-2xl font-semibold">Contact</a>
+            <a href="#contact" class="mobile-nav-link mt-6 bg-gray-900 text-white px-8 py-3 rounded-lg">Get in Touch</a>
+        </nav>
+    </div>
 
     <main>
         <!-- Hero Section -->
@@ -92,7 +118,7 @@
                         <div class="absolute inset-0 bg-black/30 rounded-lg flex items-end p-8 text-white">
                             <div class="max-w-md">
                                 <h3 class="text-2xl font-semibold">Glowvery</h3>
-                                <p class="mt-2">A home cleaning brand we currently building. Focused on a seamless user experience and modern design, with business partner Pralay Sarker.</p>
+                                <p class="mt-2">A home cleaning brand I'm currently building. Focused on a seamless user experience and modern design.</p>
                                 <a href="#" class="mt-4 inline-block text-white font-semibold hover:underline">View Project &rarr;</a>
                             </div>
                         </div>
@@ -181,7 +207,7 @@
                     <a href="mailto:supriyamazumder2003@gmail.com" class="text-lg font-semibold text-gray-900 hover:text-gray-600 transition-colors">supriyamazumder2003@gmail.com</a>
                 </div>
                 <div class="mt-12 max-w-lg mx-auto">
-                    <a href="https://www.linkedin.com/in/supriya-mazumder-3a1b0826a/" target="_blank" rel="noopener noreferrer" class="mb-8 inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    <a href="https://www.linkedin.com/in/supriya-mazumder-694b2134b/" target="_blank" rel="noopener noreferrer" class="mb-8 inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
                         Connect on LinkedIn
                     </a>
                     
@@ -208,21 +234,15 @@
              <div class="flex justify-center mt-4 space-x-6">
                 <a href="https://www.instagram.com/mazumdersupriya41?utm_source=ig_web_button_share_sheet&igsh=Z3hhdmswdGtocTJu" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
                     <span class="sr-only">Instagram</span>
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12.315 2c-4.03.006-4.59.018-6.18.09c-1.59.072-2.684.348-3.64.744a4.878 4.878 0 0 0-1.77 1.77c-.396.956-.672 2.05-.744 3.64C.018 7.72.006 8.28.006 12.315c0 4.03.012 4.59.09 6.18c.072 1.59.348 2.684.744 3.64a4.878 4.878 0 0 0 1.77 1.77c.956.396 2.05.672 3.64.744c1.59.072 2.15.084 6.18.09c4.03-.006 4.59-.018 6.18-.09c1.59-.072 2.684-.348 3.64-.744a4.878 4.878 0 0 0 1.77-1.77c.396-.956.672-2.05.744-3.64c.078-1.59.09-2.15.09-6.18c0-4.03-.012-4.59-.09-6.18c-.072-1.59-.348-2.684-.744-3.64a4.878 4.878 0 0 0-1.77-1.77c-.956-.396-2.05-.672-3.64-.744C16.906 2.018 16.346 2.006 12.315 2zm-1.04 2.08c3.876 0 4.38.016 5.91.086c1.42.064 2.24.324 2.83.58a2.81 2.81 0 0 1 1.02 1.02c.256.59.516 1.41.58 2.83c.07 1.53.086 2.034.086 5.91s-.016 4.38-.086 5.91c-.064 1.42-.324 2.24-.58 2.83a2.81 2.81 0 0 1-1.02 1.02c-.59.256-1.41.516-2.83.58c-1.53.07-2.034.086-5.91.086s-4.38-.016-5.91-.086c-1.42-.064-2.24-.324-2.83-.58a2.81 2.81 0 0 1-1.02-1.02c-.256-.59-.516-1.41-.58-2.83c-.07-1.53-.086-2.034-.086-5.91s.016-4.38.086-5.91c.064-1.42.324-2.24.58-2.83a2.81 2.81 0 0 1 1.02-1.02c.59-.256 1.41-.516 2.83-.58c1.53-.07 2.034-.086 5.91-.086zM12 7.25a4.75 4.75 0 1 0 0 9.5a4.75 4.75 0 0 0 0-9.5zM12 9a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm6.5-1.75a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5z" clip-rule="evenodd" />
-                    </svg>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c-4.03.006-4.59.018-6.18.09c-1.59.072-2.684.348-3.64.744a4.878 4.878 0 0 0-1.77 1.77c-.396.956-.672 2.05-.744 3.64C.018 7.72.006 8.28.006 12.315c0 4.03.012 4.59.09 6.18c.072 1.59.348 2.684.744 3.64a4.878 4.878 0 0 0 1.77 1.77c.956.396 2.05.672 3.64.744c1.59.072 2.15.084 6.18.09c4.03-.006 4.59-.018 6.18-.09c1.59-.072 2.684-.348 3.64-.744a4.878 4.878 0 0 0 1.77-1.77c.396-.956.672-2.05.744-3.64c.078-1.59.09-2.15.09-6.18c0-4.03-.012-4.59-.09-6.18c-.072-1.59-.348-2.684-.744-3.64a4.878 4.878 0 0 0-1.77-1.77c-.956-.396-2.05-.672-3.64-.744C16.906 2.018 16.346 2.006 12.315 2zm-1.04 2.08c3.876 0 4.38.016 5.91.086c1.42.064 2.24.324 2.83.58a2.81 2.81 0 0 1 1.02 1.02c.256.59.516 1.41.58 2.83c.07 1.53.086 2.034.086 5.91s-.016 4.38-.086 5.91c-.064 1.42-.324 2.24-.58 2.83a2.81 2.81 0 0 1-1.02 1.02c-.59.256-1.41.516-2.83.58c-1.53.07-2.034.086-5.91.086s-4.38-.016-5.91-.086c-1.42-.064-2.24-.324-2.83-.58a2.81 2.81 0 0 1-1.02-1.02c-.256-.59-.516-1.41-.58-2.83c-.07-1.53-.086-2.034-.086-5.91s.016-4.38.086-5.91c.064-1.42.324-2.24.58-2.83a2.81 2.81 0 0 1 1.02-1.02c.59-.256 1.41-.516 2.83-.58c1.53-.07 2.034-.086 5.91-.086zM12 7.25a4.75 4.75 0 1 0 0 9.5a4.75 4.75 0 0 0 0-9.5zM12 9a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm6.5-1.75a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5z" clip-rule="evenodd" /></svg>
                 </a>
                 <a href="https://www.facebook.com/supriya.mazumder.79" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
                     <span class="sr-only">Facebook</span>
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-                    </svg>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
                 </a>
                 <a href="https://github.com/supriya140?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
                     <span class="sr-only">GitHub</span>
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.003 10.003 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
-                    </svg>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.003 10.003 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                 </a>
             </div>
             <p class="mt-8">&copy; 2024 Supriya Mazumder. All Rights Reserved.</p>
@@ -259,6 +279,31 @@
                 }
             });
             scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            // --- Mobile Menu Toggle ---
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOpenIcon = document.getElementById('menu-open-icon');
+            const menuCloseIcon = document.getElementById('menu-close-icon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+                menuOpenIcon.classList.toggle('hidden');
+                menuCloseIcon.classList.toggle('hidden');
+                document.body.classList.toggle('overflow-hidden');
+            };
+
+            menuBtn.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
         });
     </script>
 </body>
